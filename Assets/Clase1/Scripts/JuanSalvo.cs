@@ -12,7 +12,19 @@ public class JuanSalvo : MonoBehaviour
     [Header("Referencias UI")]
     [SerializeField]
     private TextMeshProUGUI _uiText;
+
+    [SerializeField]
+    private string _name;
+    
+    [SerializeField]
+    private int _age;
+    
+    [SerializeField]
+    private float _height;
+
     private string _finalMessage;
+    
+
 
     // ---------------------------------------------------------
 
@@ -28,6 +40,7 @@ public class JuanSalvo : MonoBehaviour
         // Asigna a la variable '_finalMessage' la concatenación de tus variables.
 
         // _finalMessage = ... (Escribe tu código aquí)
+        _finalMessage = "Dime tu edad y te diré si ya se publicó El Eternauta o no.";
 
         // Mostrar en consola
         Debug.Log(_finalMessage == null ? "¡Falta construir el mensaje!" : _finalMessage);
@@ -43,6 +56,13 @@ public class JuanSalvo : MonoBehaviour
         // 3. TAREA: Condicionales - Responder dependiendo algun parametro como nombre,edad o altura.
         //Ejemplo: si altura >= 2 -> "Fua estas para jugar en la NBA".
 
+        if(_age >= (2026 - 1957))
+        {
+            _finalMessage = "Cuando naciste, todavía no salía El Eternauta";
+        }
+        else{
+            _finalMessage = "Cuando naciste, ya salió El Eternauta";
+        }
         // _finalMessage = ... (Escribe tu código aquí)
 
         // ---------------------------------------------------------
