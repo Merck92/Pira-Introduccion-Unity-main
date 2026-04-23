@@ -24,6 +24,6 @@ public class LogButtons : MonoBehaviour
     {
         // Escribe tu código aquí:
         Debug.Log("¡ELLOS SABEN DONDE ESTAMOS!");
-        //Marcial: Intenté con EditorApplication.Exit o Apliccation.Quit() pero ninguno me salió. También probé con el time, pero no me salió.
+        UnityEditor.EditorApplication.isPaused = true;
     }
 }
